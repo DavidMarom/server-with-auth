@@ -4,7 +4,6 @@ const routes = require('./routes/routes');
 
 const app = express()
 
-
 app.use(cors({
     origin: 'http://localhost:3001',      // must be the exact origin (no '*')
     credentials: true,                     // allow cookies/Authorization
