@@ -45,12 +45,7 @@ router.post("/register", async (req, res) => {
 });
 
 router.get("/books", isAuthorized, async (req, res) => {
-    const token = req.headers.authorization
-    if (token && isTokenActive(token)) {
-        res.json(DB);
-    } else {
-        res.status(401).json("Unauthorized");
-    }
+    res.json(DB);
 });
 
 module.exports = router;
